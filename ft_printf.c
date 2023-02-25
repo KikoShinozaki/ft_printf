@@ -10,37 +10,56 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libftprintf.h"
+#include"ft_printf.h"
 
-int distr_af_pc(const char *input, va_list args)
+int	distr_af_pc(const char *input, va_list args)
 {
-	
+	size_t	i;
+	int		output;
+
+	i = 0;
+	if (input[i] == 'c')
+		output = ft_putchar(va_arg(args, int));
+	else if (input[i] == 's')
+		output = ft_putstr(va_arg(args, char *));
+	else if (input[i] == 'p')
+
+	else if (input[i] == 'd' || input[i] == 'i')
+		output = ft_putnbr(va_arg(args, int));
+	else if (input[i] == 'u')
+
+	else if (input[i] == 'x')
+
+	else if (input[i] == 'X')
+
+	else if (input[i] == '%')
+		output = ft_putchar('%');
 }
 
 int	ft_printf(const char *input, ...)
 {
-	va_list	args;
-	int		i;
-	int		output;
+	va_list		args;
+	size_t		i;
+	long long	output;
 
 	va_start(args, input);
 	i = 0;
 	output = 0;
 	while (imput[i] != '\0')
 	{
-		if (output >= INT_MAX)
-			return (-1);
 		if (input[i] == '%')
 		{
 			i++;
-			output += distr_af_pc(input, args);
+			output += distr_af_pc(input[i], args);
 		}
-		else 
+		else
 			output += ft_putchar(*input);
 		i++;
 	}
+	if (output == -1 || output > INT_MAX)
+		return (-1);
 	va_end(args);
-	return (output);
+	return ((int)output);
 }
 
 int	main(void)
