@@ -12,16 +12,35 @@
 
 #include"libftprintf.h"
 
-int	ft_printf(const char *format, ...)
+int distr_af_pc(const char *input, va_list args)
+{
+	
+}
+
+int	ft_printf(const char *input, ...)
 {
 	va_list	args;
+	int		i;
+	int		output;
 
-	va_start(args, format);
-	while (format)
+	va_start(args, input);
+	i = 0;
+	output = 0;
+	while (imput[i] != '\0')
 	{
-		
+		if (output >= INT_MAX)
+			return (-1);
+		if (input[i] == '%')
+		{
+			i++;
+			output += distr_af_pc(input, args);
+		}
+		else 
+			output += ft_putchar(*input);
+		i++;
 	}
 	va_end(args);
+	return (output);
 }
 
 int	main(void)
