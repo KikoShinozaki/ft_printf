@@ -12,15 +12,18 @@
 
 #include"ft_printf.h"
 
-int	ft_putnbr_sixteen(unsigned long int p)
+int	ft_putnbr_sixteen(unsigned long int p, char *dist)
 {
-	unsigned int	tmp;	
-	int				output;
+	unsigned int	tmp;
 
-	output = 0;
 	tmp = p % 16;
 	p = p / 16;
 	if (0 < tmp)
-		output += ft_putnbr_sixteen(p);
-	
+		return (ft_putnbr_sixteen(p));
+	if (0 <= tmp && tmp <= 9)
+		return (ft_putchar((char)tmp + '0'));
+	else if (tmp > 9 && dist == "small")
+		return (ft_putchar('a' + (char)tmp - 10));
+	else if (tmp > 9 && dist == "big")
+		return (ft_putchar('A' + (char)tmp - 10));
 }

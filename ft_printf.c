@@ -22,15 +22,16 @@ int	distr_af_pc(const char *input, va_list args)
 	else if (input[i] == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	else if (input[i] == 'p')
-		return (ft_putstr("0x") + ft_putnbr_sixteen(va_arg(args, unsigned long int)));
+		return (ft_putstr("0x")
+			+ ft_putnbr_sixteen(va_arg(args, unsigned long int), "small"));
 	else if (input[i] == 'd' || input[i] == 'i')
 		return (ft_putnbr(va_arg(args, int)));
 	else if (input[i] == 'u')
-		return (
+		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
 	else if (input[i] == 'x')
-
+		return (ft_putnbr_sixteen(va_arg(args, unsigned int)), "small");
 	else if (input[i] == 'X')
-
+		return (ft_putnbr_sixteen(va_arg(args, unsigned int)), "big");
 	else if (input[i] == '%')
 		return (ft_putchar('%'));
 }
