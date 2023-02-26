@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:19:17 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/26 16:37:06 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/02/26 18:08:49 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,24 @@
 int	distr_af_pc(const char *input, va_list args)
 {
 	size_t	i;
-	int		output;
 
 	i = 0;
 	if (input[i] == 'c')
-		output = ft_putchar(va_arg(args, int));
+		return (ft_putchar(va_arg(args, int)));
 	else if (input[i] == 's')
-		output = ft_putstr(va_arg(args, char *));
+		return (ft_putstr(va_arg(args, char *)));
 	else if (input[i] == 'p')
-		output = ft_putadrs(va_arg(args, uintptr_t));
+		return (ft_putstr("0x") + ft_putnbr_sixteen(va_arg(args, unsigned long int)));
 	else if (input[i] == 'd' || input[i] == 'i')
-		output = ft_putnbr(va_arg(args, int));
+		return (ft_putnbr(va_arg(args, int)));
 	else if (input[i] == 'u')
-		output =
+		return (
 	else if (input[i] == 'x')
 
 	else if (input[i] == 'X')
 
 	else if (input[i] == '%')
-		output = ft_putchar('%');
+		return (ft_putchar('%'));
 }
 
 int	ft_printf(const char *input, ...)
@@ -48,12 +47,9 @@ int	ft_printf(const char *input, ...)
 	while (input[i] != '\0')
 	{
 		if (input[i] == '%')
-		{
-			i++;
-			output += distr_af_pc(input[i], args);
-		}
+			output += distr_af_pc(input[++i], args);
 		else
-			output += ft_putchar(*input);
+			output += ft_putchar(input[i]);
 		i++;
 	}
 	if (output == -1 || output > INT_MAX)
