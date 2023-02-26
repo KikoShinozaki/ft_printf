@@ -1,9 +1,19 @@
-//
-// Created by c1142 on 2023/02/26.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/26 13:41:39 by mnanke            #+#    #+#             */
+/*   Updated: 2023/02/26 13:41:39 by mnanke           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include"ft_printf.h"
 
-void	ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	long long	num;
 
@@ -19,5 +29,5 @@ void	ft_putnbr(int n)
 		ft_putnbr(num % 10);
 	}
 	else
-		ft_putchar(num + '0')
+		ft_putchar(num + '0');
 }

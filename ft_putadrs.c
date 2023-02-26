@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putadrs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/26 13:41:25 by mnanke            #+#    #+#             */
-/*   Updated: 2023/02/26 15:57:48 by mnanke           ###   ########.fr       */
+/*   Created: 2023/02/26 16:33:24 by mnanke            #+#    #+#             */
+/*   Updated: 2023/02/26 16:55:15 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include"ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdint.h>
-# include <limits.h>
-# include <inttypes.h>
-# include <string.h>
-# include <stdio.h>
-
-int		ft_printf(const char *input, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *str);
-int		ft_putnbr(int n);
-
-#endif
+int	ft_putadrs(uintptr_t p)
+{
+	
+}
