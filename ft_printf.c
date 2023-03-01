@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:19:17 by mnanke            #+#    #+#             */
-/*   Updated: 2023/03/01 17:06:42 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/03/01 17:37:54 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ int	main(void)
 	char	putc;
 	char	putp[1000];
 
-	putc = 'a';
+	putc = 'b';
 	strcpy(putp, "abcd");
-	// printf("printf(c):%c\n", putc);
-	// ft_printf("ft_printf(c):%c\n--------------\n", putc);
-	printf("printf(s):%s\n", putp);
-	ft_printf("ft_printf(s):%s\n--------------\n", putp);
+	printf("printf(c):%c\n", putc);
+	ft_printf("ft_printf(c):%c\n--------------\n", putc);
+	// printf("printf(s):%s\n", putp);
+	// ft_printf("ft_printf(s):%s\n--------------\n", putp);
 // 	printf("printf:%p\n", putp);
 // 	ft_printf("ft_printf:%p\n--------------\n", putp);
 // 	printf("printf:%d\n", INT_MIN);
