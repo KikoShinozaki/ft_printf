@@ -19,6 +19,7 @@ int	ft_putnbr(int n)
 	int			output;
 
 	num = n;
+	output = 0;
 	if (num < 0)
 	{
 		output += ft_putchar('-');

@@ -1,12 +1,13 @@
 
 #include"ft_printf.h"
 
-int	ft_putnbr_unsigned(unsigned int args)
+int	ft_putnbr_unsigned(unsigned int ap)
 {
 	long long	num;
 	int			output;
 
-	num = n;
+	num = ap;
+	output = 0;
 	if (num < 0)
 		output = ft_putnbr_unsigned(UINT_MAX);
 	if (num > 9)
