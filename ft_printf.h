@@ -26,7 +26,7 @@ int	ft_printf(const char *input, ...);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
 int	ft_putnbr(int n);
-int	ft_putnbr_sixteen(unsigned long int p, int dest);
-int	ft_putnbr_unsigned(unsigned int args);
+int	ft_putnbr_sixteen(unsigned long int ap, int dest);
+int	ft_putnbr_unsigned(unsigned int ap);
 
 #endif

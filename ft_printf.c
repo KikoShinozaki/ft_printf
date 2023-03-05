@@ -59,10 +59,10 @@ int	ft_printf(const char *input, ...)
 
 int	main(void)
 {
-	char	putc;
+//	char	putc;
 	char	putp[1000];
 
-	putc = 'b';
+//	putc = 'b';
 	strcpy(putp, "abcd");
 	// printf("printf(c):%c\n", putc);
 	// ft_printf("ft_printf(c):%c\n--------------\n", putc);

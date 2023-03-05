@@ -20,12 +20,12 @@ int	ft_putnbr_sixteen(unsigned long int ap, int dest)
 	printf("\n-------\nap:%lu\n-------\n", ap);
 	tmp = ap % 16;
 	ap = ap / 16;
-	printf("tmp:%u\n-------\n", tmp);
-	printf("ap:%lu \n----\ndest:%d", ap, dest);
+	printf("tmp:%lu\n-------\n", tmp);
+	printf("dividedap:%lu \n----\ndest:%d", ap, dest);
 	output = 0;
 	if (0 < tmp)
 		output += ft_putnbr_sixteen(ap, dest);
-	if (0 <= tmp && tmp <= 9)
+	if (tmp <= 9)
 		output += ft_putchar((char)tmp + '0');
 	else if (tmp > 9 && dest == '0')
 		output += ft_putchar('a' + (char)tmp - 10);
