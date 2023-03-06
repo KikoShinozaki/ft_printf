@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 13:41:25 by mnanke            #+#    #+#             */
-/*   Updated: 2023/03/02 15:46:22 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/03/06 15:50:57 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@
 # include <stdarg.h>
 # include <string.h>
 # include <stdio.h>
-# include "libft/libft.h"
 
-int	ft_printf(const char *input, ...);
-int	ft_putchar(char c);
-int	ft_putstr(char *str);
-int	ft_putnbr(int n);
-int	ft_putnbr_sixteen(unsigned long int ap, int dest);
-int	ft_putnbr_unsigned(unsigned int ap);
+
+int		ft_printf(const char *input, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putnbr(int n);
+int		ft_putnbr_sixteen(unsigned long int ap, int dest);
+int		ft_putnbr_unsigned(unsigned int ap);
+size_t	ft_strlen(const char *str);
 
 #endif

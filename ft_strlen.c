@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 18:04:32 by mnanke            #+#    #+#             */
-/*   Updated: 2023/01/16 18:04:32 by mnanke           ###   ########.fr       */
+/*   Created: 2023/01/19 17:45:31 by mnanke            #+#    #+#             */
+/*   Updated: 2023/01/19 17:45:31 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"ft_printf.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlen(const char *str)
 {
-	return ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'));
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

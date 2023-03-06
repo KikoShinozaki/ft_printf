@@ -6,7 +6,7 @@
 /*   By: mnanke <mnanke@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 16:33:24 by mnanke            #+#    #+#             */
-/*   Updated: 2023/03/02 15:57:35 by mnanke           ###   ########.fr       */
+/*   Updated: 2023/03/06 14:22:14 by mnanke           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 int	ft_putnbr_sixteen(unsigned long int ap, int dest)
 {
-	unsigned long int	tmp;
-	int					output;
+	unsigned int	tmp;
+	int				output;
 
-	printf("\n-------\nap:%lu\n-------\n", ap);
 	tmp = ap % 16;
 	ap = ap / 16;
-	printf("tmp:%lu\n-------\n", tmp);
-	printf("dividedap:%lu \n----\ndest:%d", ap, dest);
 	output = 0;
-	if (0 < tmp)
+	if (0 < ap)
 		output += ft_putnbr_sixteen(ap, dest);
 	if (tmp <= 9)
 		output += ft_putchar((char)tmp + '0');
