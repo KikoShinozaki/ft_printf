@@ -52,10 +52,7 @@ Mkfile.old
 dkms.conf
 
 #tester and others
-libft-tester-tokyo
-test
-42tokyo.code-workspace
 .DS_Store
 .vscode/
 README.md
-printfTester
+ft_printf_tester
